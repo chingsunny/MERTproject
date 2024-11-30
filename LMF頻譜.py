@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 
 # 讀取音訊檔案
-data, samplerate = sf.read('C:/Users/20040/OneDrive/桌面/LMF.wav')
+data, samplerate = sf.read('./LMF.wav')
 
 # 將多聲道平均為單聲道
 if data.ndim > 1:
