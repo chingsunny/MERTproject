@@ -4,12 +4,15 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 from pydub import AudioSegment
 import glob
-
+#print("我喜歡李泫翰")
 dirPath = r"./musicexample/*"
 result = glob.glob(dirPath)
 for f in result:
-    arr = f.split('.')
-    musicname = arr[1].split('/')[2]
+    arr = f.split('.')              #./musicexample/test01.mp3
+    filetype = 
+    musicname = f.split("\\")[1]    #./musicexample\test01.mp3 
+    print(f)
+    print(musicname)
     if arr[2]=="mp3":
         #mp3 to wav
         sound = AudioSegment.from_mp3(f)
@@ -62,4 +65,4 @@ for f in result:
     fig.tight_layout(h_pad=2)
     # 儲存及顯示圖片
     fig.savefig("./figure/" + musicname + ".png")
-    fig.show()
+    #fig.show()
